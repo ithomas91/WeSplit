@@ -10,15 +10,18 @@ import SwiftUI
 
 struct ContentView: View {
     
-   @State private var name = ""
+    let brands = ["Adidas", "Nike", "Under Armour"]
+    @State private var selectedBrand = "Adidas"
     
     var body: some View {
-        Form {
-            TextField("Enter your name", text: $name)
-            Text("Your name is \(name)")
+            Picker("Select a brand", selection: $selectedBrand){
+                ForEach(0..<brands.count){
+                    Text(self.brands[$0])
+                }
+            }
         }
-    }
 }
+    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
