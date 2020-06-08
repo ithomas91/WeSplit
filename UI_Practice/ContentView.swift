@@ -9,9 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, World!")
-    }
+        
+        NavigationView {
+            Form {
+                    Section{
+                        Text("MyApp")
+                    }
+                }
+            .navigationBarTitle(Text("Németh Tamás"), displayMode: .large)
+            }
+    
+        }
+        
 }
 
 struct ContentView_Previews: PreviewProvider {
